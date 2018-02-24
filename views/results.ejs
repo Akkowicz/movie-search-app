@@ -1,0 +1,37 @@
+<% include partials/header %>
+      <% data.Search.forEach( (movie) => { %>
+        <% if(movie.Poster === 'N/A') { movie.Poster = "/img/placeholder300x448.jpg";} %>
+          <div class="ui segment">
+            <div class="eight wide tablet column">
+              <div class="ui items">
+                <div class="item">
+                  <div class="image">
+                    <img src="<%= movie.Poster %>">
+                  </div>
+                  <div class="content">
+                    <a class="header" href="/movies/details?id=<%=movie.imdbID %>">
+                      <%= movie.Title %>
+                    </a>
+                    <div class="meta">
+                      <span><%= movie.Type %></span>
+                    </div>
+                    <div class="description">
+                      <p>
+                        <%= movie.Year %>
+                      </p>
+                    </div>
+                    <div class="extra">
+                      Click on the title for additional details
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% }) %>
+            <div class="inverted vertical footer segment">
+              <h5>© 2018 Mateusz Przybyłowicz All Rights Reserved</h5>
+            </div>
+    </div>
+  </div>
+  <% include partials/footer %>

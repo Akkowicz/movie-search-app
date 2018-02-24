@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie search</title>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/semantic.min.css">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="/semantic.min.js"></script>
+    </head>
+    <body>
+    <div class="ui doubling two column centered grid">
+    <div class="column">
+      <div class="ui pointing menu">
+        <a class="active item">
+    Results
+  </a>
+        <div class="right menu">
+          <div class="item">
+            <div class="ui transparent icon input">
+              <form method="GET" action="/movies">
+                <input type="text" placeholder="Search..." name="search" id="searchForm" pattern="^[\w\-\s]+$">
+                <button style="-webkit-box-shadow: none; box-shadow: none;" class="ui basic button"><i class="search link icon" id="submitSearch"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
